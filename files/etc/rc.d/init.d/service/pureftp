@@ -1,0 +1,18 @@
+#!/bin/sh
+
+PURE_FTP_UPLOADSCRIPT_PATH=/usr/sbin
+PURE_FTP_UPLOADSCRIPT_BIN=pure-uploadscript
+PURE_FTP_UPLOADSCRIPT_OPTIONS="-B -r /opt/qsi/scripts/ftp_updated.sh"
+
+PURE_FTPD=/usr/sbin/pure-ftpd
+#PURE_FTPD=/home/pure-ftpd
+#PURE_FTPD_OPTIONS="-A -j -R -H -b -M -o -k 99 -U 000 -8 utf8 -9 utf8"
+PURE_FTPD_OPTIONS="-A -E -j -R -H -b -M -o -I 3 -c 10 -C 3 -k 99 -U 000 -8 utf-8 -9 utf-8"
+
+PID=`pidof ${PURE_FTP_UPLOADSCRIPT_BIN} 2>/dev/null`
+if [ -z "$PID" ] 
+then
+	${PURE_FTP_UPLOADSCRIPT_PATH}/${PURE_FTP_UPLOADSCRIPT_BIN} ${PURE_FTP_UPLOADSCRIPT_OPTIONS} 2>/dev/null
+fi
+
+$PURE_FTPD $PURE_FTPD_OPTIONS

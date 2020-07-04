@@ -1,0 +1,20 @@
+
+Project: EWNUL0 (Media_Drive)
+Platform: Freescale i.MX502
+PMIC: MC13892
+DRAM: LPDDR1 128MB
+WI-FI: WG7311-2A
+HW VER: PVT REV.C
+GLIBC: 2.11
+FTP : pure-ftpd V1.0.36-20121015
+UPnP : miniupnpd V1.6.20120406
+ffmpeg: V1.1.4
+taglib: V1.8.0-20121127
+
+U-BOOT: V1.2.5
+KERNEL: 2.6.35 Revision: 1.1.8
+FW VER: 3.04
+Rescue system: V1.0.6
+QSI @ Jan 22, 2015
+Nimbus server: V1.1.8
+
